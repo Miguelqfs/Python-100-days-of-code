@@ -51,10 +51,7 @@ while score < 50:
         score += 1
 
 # Putting all missed States in a list
-missed_states = []
-for state in all_states:
-    if state not in guessed_states:
-        missed_states.append(state)
+missed_states = [state for state in all_states if state not in guessed_states]
 
 # Creating a new DataFrame with all missing states
 data_dict = {
